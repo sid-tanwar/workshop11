@@ -94,7 +94,10 @@ app.get("/", (req, res) => {
 
 app.post("/upload", upload.single("file"), (req, res) => {
 
-    res.json({ file: req.file.id });
+    res.json({
+        file: req.file.id,
+        message: "File Uploaded Successfully!"
+    });
 
     /*upload(req, res, function (err) {
 
